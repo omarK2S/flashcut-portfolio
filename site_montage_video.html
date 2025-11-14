@@ -1,0 +1,213 @@
+<!-- Site web FlashCut finalisé avec email, tarifs et portfolio -->
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FlashCut — Portfolio</title>
+  <meta name="description" content="Montage vidéo professionnel pour créateurs et petites entreprises — montage YouTube, Reels, TikTok, pubs.">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#ff6b6b;--muted:#9aa4b2;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#071024 0%,#07162b 100%);color:#e6eef6;line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:32px}
+    header{display:flex;gap:24px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ff9a9a);display:flex;align-items:center;justify-content:center;font-weight:700;color:#082233}
+    h1{font-size:28px;margin:0}
+    p.lead{color:var(--muted);margin-top:6px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:10px 16px;border-radius:10px;border:0;background:var(--accent);color:#071426;cursor:pointer;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .features{display:flex;gap:12px;margin-top:18px}
+    .feature{background:var(--glass);padding:12px;border-radius:10px;flex:1;text-align:center}
+
+    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .video-thumb{position:relative;border-radius:10px;overflow:hidden;background:#071226}
+    .video-thumb img{width:100%;height:160px;object-fit:cover;display:block}
+    .video-thumb .meta{padding:10px}
+
+    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+    .testimonial{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:10px}
+
+    .pricing{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .plan{flex:1;min-width:220px;padding:16px;border-radius:10px;background:linear-gradient(180deg,#071129,transparent);border:1px solid rgba(255,255,255,0.03)}
+
+    footer{margin-top:36px;padding:18px 0;color:var(--muted);font-size:14px;text-align:center}
+
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.container{padding:18px}.logo{width:48px;height:48px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">FC</div>
+        <div>
+          <h1>FlashCut — Monteur Vidéo</h1>
+          <p class="lead">Montage rapide et pro pour TikTok / Reels / YouTube & pubs.</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h2>Je rends tes vidéos plus pro — sans prise de tête</h2>
+          <p class="lead">Coupe, correction colorimétrique, sous-titres, habillage, motion design basique. Livraison rapide et révisions incluses.</p>
+
+          <div class="features">
+            <div class="feature">
+              <strong>Livraison 48–72h</strong>
+              <div class="muted">selon la longueur</div>
+            </div>
+            <div class="feature">
+              <strong>Sous-titres & formats</strong>
+              <div class="muted">TikTok / Reels / YouTube</div>
+            </div>
+            <div class="feature">
+              <strong>Révisions</strong>
+              <div class="muted">2 révisions incluses</div>
+            </div>
+          </div>
+
+          <div class="cta">
+            <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Demander un devis</button>
+            <button class="btn ghost" onclick="openDemo()">Voir 2 démos</button>
+          </div>
+        </div>
+
+        <section id="services" style="margin-top:18px">
+          <h3>Services</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px">
+            <div class="card">Montage court (Reels/TikTok) — montage, colour grade, sous-titres</div>
+            <div class="card">Montage Podcast/YouTube — cuts, intro/outro, chapitrage</div>
+            <div class="card">Publicité & montage produit — format publicitaire, optimisation</div>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h4>Extrait rapide</h4>
+          <video controls width="100%" style="border-radius:8px;display:block;" poster="">
+            <source src="" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+          </video>
+          <p style="color:var(--muted);font-size:13px;margin-top:10px">Exemple : montage court optimisé pour réseaux</p>
+        </div>
+
+        <div class="card" style="margin-top:12px;text-align:center">
+          <strong>Promo</strong>
+          <p class="lead">1ère vidéo à -30% pour nouveaux clients</p>
+          <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Je profite de l'offre</button>
+        </div>
+      </aside>
+    </section>
+
+    <section id="portfolio" style="margin-top:28px">
+      <h3>Portfolio</h3>
+      <p class="lead">Quelques exemples rapides. Clique pour ouvrir.</p>
+      <div class="portfolio-grid">
+        <div class="video-thumb card" onclick="openModal('https://www.youtube.com/watch?v=DhQHlCaSR_w')">
+          <img src="https://img.youtube.com/vi/DhQHlCaSR_w/0.jpg" alt="Vidéo 1">
+          <div class="meta"><strong>Montage Démo 1</strong><div style="color:var(--muted);font-size:13px">YouTube example</div></div>
+        </div>
+        <div class="video-thumb card" onclick="openModal('https://www.youtube.com/watch?v=LGtDZDVQigY')">
+          <img src="https://img.youtube.com/vi/LGtDZDVQigY/0.jpg" alt="Vidéo 2">
+          <div class="meta"><strong>Montage Démo 2</strong><div style="color:var(--muted);font-size:13px">YouTube example</div></div>
+        </div>
+        <div class="video-thumb card" onclick="openModal('https://www.instagram.com/reel/C3cex1aN236/?hl=en')">
+          <img src="https://via.placeholder.com/600x360.png?text=Instagram+Reel" alt="Vidéo 3">
+          <div class="meta"><strong>Montage Démo 3</strong><div style="color:var(--muted);font-size:13px">Instagram Reel</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top:28px">
+      <h3>Témoignages</h3>
+      <div class="testimonials">
+        <div class="testimonial">« Super réactif, montage propre, les vidéos ont gagné en vues. » — Alice, créatrice</div>
+        <div class="testimonial">« Travail pro et rapide, très bon rapport qualité/prix. » — Marc, shop</div>
+      </div>
+    </section>
+
+    <section id="tarifs" style="margin-top:28px">
+      <h3>Tarifs</h3>
+      <div class="pricing">
+        <div class="plan card">
+          <h4>Pack Starter</h4>
+          <p class="lead">Montage court (<=60s) — 1 révision</p>
+          <strong>€25</strong>
+          <p style="font-size:13px;color:var(--muted)">Idéal pour TikTok / Reels</p>
+        </div>
+        <div class="plan card">
+          <h4>Pack Standard</h4>
+          <p class="lead">Montage 5–10min — 2 révisions, color grade</p>
+          <strong>€70</strong>
+          <p style="font-size:13px;color:var(--muted)">Youtube cuts & shorts</p>
+        </div>
+        <div class="plan card">
+          <h4>Pack Pro</h4>
+          <p class="lead">Montage long, motion basique — livraison + export toutes plateformes</p>
+          <strong>€150</strong>
+          <p style="font-size:13px;color:var(--muted)">Publicités & contenus premium</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <h3>Contact</h3>
+      <div class="card">
+        <form id="contactForm" onsubmit="handleContact(event)">
+          <div style="display:flex;gap:8px;flex-direction:column">
+            <input id="name" placeholder="Ton nom" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <input id="email" type="email" placeholder="Email" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+            <textarea id="message" placeholder="Parle-moi de ton projet (liens, durée, deadline)" rows="4" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+            <div style="display:flex;gap:8px;align-items:center">
+              <button class="btn" type="submit">Envoyer</button>
+              <button class="btn ghost" type="button" onclick="location.href='mailto:omarkass1200@gmail.com?subject=Demande%20de%20montage'">Email direct</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> FlashCut — Monteur Vidéo • <span style="color:var(--muted)">Disponible pour collaborations</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function openDemo(){
+      window.open('https://www.youtube.com','_blank');
+    }
+
+    function openModal(url){
+      window.open(url,'_blank');
+    }
+
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email){alert('Merci d\'indiquer ton nom et ton email.');return}
+      const subject = encodeURIComponent('Demande de montage — ' + name);
+      const body = encodeURIComponent('Nom: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+      window.location.href = `mailto:omarkass1200@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
